@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/css/variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+
+// $white: #FFF;
+html, body { height: 100vh;}
+input::placeholder { color: $white; }
+h3, h2 { font-family: 'Montserrat', sans-serif; color: #2E2E2E; font-weight: bold; }
+h1 { font-family: 'Playfair Display', serif; font-size: 48px; color: #2E2E2E; }
+h3 { font-size: 16px; }
+h2 { font-size: 24px; }
+.body-normal { font-family: 'Open Sans', sans-serif; font-size: 16px; color: #6C6C6C; }
+
+@include media-breakpoint-up(lg) {
+    .w-lg-50 { width: 50%;}
+}
+
+// Navbar Cart
+div.cart fa-icon { color: $white; font-size: 18px; cursor: pointer;}
+.cart-modal .modal-content { border-radius: 0; border: 0px; box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; }
+.cart-modal .modal-content button.close:focus { outline: none; }
+.modal-backdrop { background: transparent; }
+.cart-modal .modal-content button.close { padding-top: 0px; padding-bottom: 0px; }
+.cart-modal .modal-content button.close span { font-size: 40px; font-weight: normal; }
+.cart-modal .heading { border-bottom: 2px solid; }
+.cart-modal .modal-footer { background: rgb(247, 247, 247);}
+.cart-modal .modal-footer .btn-outline-primary { background: $white; border-color: $white; }
+.cart-modal .quantity-container fa-icon { padding: 0px 7px; background: #f7f7f7; border-radius: 50%; border: 0; height: 28px; width: 28px; line-height: 28px; vertical-align: middle; cursor: pointer; }
+.cart-modal p.remove { cursor: pointer; font-size: 14px; }
+.cart-modal p.remove fa-icon { color: red; }
+
+// Footer
+footer ul li a:hover { text-decoration: none; }
+footer ul li a { color: #6c6c6c; font-size: 14px; }

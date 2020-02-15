@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'django_filters',
+    
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +85,7 @@ DATABASES = {
     }
 }
 
-
+AUTH_USER_MODEL = 'api.Customer'
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -128,3 +132,34 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 JET_SIDE_MENU_COMPACT = True
+from django.utils.translation import ugettext_lazy as _
+JET_SIDE_MENU_ITEMS = [
+    {
+        'label': _('General'), 
+        'items': [
+            {'name': 'api.department'},
+            {'name': 'api.category'},
+            {'name': 'api.attribute'},
+            {'name': 'api.product'},
+            {'name': 'api.tax'},
+            {'name': 'api.shippingregion'},
+            {'name': 'api.shipping'},
+            {'name': 'api.shoppingcart'},
+            {'name': 'api.audit'},
+            {'name': 'api.review'},
+        ],
+    },
+    {
+        'label': _('Customer'), 
+        'items': [
+            {'name': 'api.customer'},
+            {'name': 'api.orders'},
+        ],
+    },   
+]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
+

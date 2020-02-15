@@ -1,0 +1,17 @@
+// Navbar
+nav.navbar { font-family: 'Montserrat', sans-serif; }
+.navbar-brand { font-size: 25px; letter-spacing: 4px; }
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown-toggle::after { display: none; }
+.navbar-nav .nav-item .nav-link { color: var(--white); }
+
+.search-form input,.search-form input:focus { background: rgba(255,255,255,0.5); padding-left: 45px; font-size: 16px; color: var(--white)}
+.search-form fa-icon { left: 15px; top: 6px; font-size: 18px; color: var(--white);}
+.search-form input::-webkit-input-placeholder { color: var(--white); }
+.search-form input::-moz-placeholder { color: var(--white); }
+.search-form input:-moz-placeholder { /* Older versions of Firefox */
+color: var(--white);
+}
+.search-form input:-ms-input-placeholder { color: var(--white); }

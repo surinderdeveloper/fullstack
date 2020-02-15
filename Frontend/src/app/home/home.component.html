@@ -1,0 +1,75 @@
+<div class="row m-0">
+	<div class="col-12 p-0">
+		<ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+			<ng-template ngbSlide>
+				<img src="https://via.placeholder.com/800X250.jpg?text=Slider 1" class="d-block w-100" alt="Slider 1">
+			</ng-template>
+			<ng-template ngbSlide>
+				<img src="https://via.placeholder.com/800X250.jpg?text=Slider 2" class="d-block w-100" alt="Slider 2">
+			</ng-template>
+			<ng-template ngbSlide>
+				<img src="https://via.placeholder.com/800X250.jpg?text=Slider 3" class="d-block w-100" alt="Slider 3">
+			</ng-template>
+		</ngb-carousel>
+	</div>
+	<div class="col-12">
+		<div class="row m-0 mt-3 py-lg-5 py-3 bg-white shadow-sm">
+			<div class="col-lg-4 col-12 text-center">
+				<img src="https://via.placeholder.com/150X200" class="img-fluid">
+			</div>
+			<div class="col-lg-8 col-12 pt-3 pt-lg-0">
+				<h2>Vera Bradley</h2>
+				<p class="py-3 body-normal">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+				<button class="btn btn-primary btn-lg px-5">Shop Now</button>
+			</div>
+		</div>
+
+		<div class="row m-0 mt-3">
+			<div class="col-lg-4 col-12 pl-lg-0">
+				<div class="w-100 h-50 pb-4">
+					<div class="w-100 h-100 bg-wow shadow-sm d-flex align-items-center">
+						<div class="w-100 text-center">
+							<h1>WOW</h1>
+							<h2 class="text-primary mt-4">Check</h2>
+							<h2 class="text-primary">WHAT!</h2>
+						</div>
+					</div>
+				</div>
+				<div class="w-100 px-0 h-50 shadow-sm">
+					<img src="https://via.placeholder.com/500X333" class="img-fluid">
+				</div>
+			</div>
+			<div class="col-lg-8 col-12 pr-lg-0">
+				<div class="w-100 pb-4 bg-white text-center shadow-sm">
+					<img src="https://via.placeholder.com/1000X450" class="img-fluid">
+					<h1 class="pt-3">Let the Game begin</h1>
+					<p>Registration is on - get ready for the open</p>
+					<button class="btn btn-primary btn-lg px-5">Register</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-12 subscribe-area py-5 mt-4 text-center">
+		<h2 class="text-primary">10% Discount for your subscription</h2>
+		<h3 class="w-lg-50 mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h3>
+		<form class="w-lg-50 mx-auto">
+			<div class="form-row align-items-center">
+				<div class="col-lg-6 offset-lg-2">
+					<label class="sr-only" for="inlineFormInputGroup">Username</label>
+					<div class="input-group mb-2">
+						<div class="input-group-prepend">
+							<div class="input-group-text bg-white">
+								<fa-icon [icon]="['fa', 'envelope']"></fa-icon>
+							</div>
+						</div>
+						<input type="email" class="form-control" id="inlineFormInputGroup" placeholder="Your e-mail here">
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary py-1">
+	<a class="navbar-brand text-uppercase font-weight-bold" [routerLink]="['/']">Shopmate</a>
+	<button
+		class="navbar-toggler"
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+		(click)="toggleNavbar()">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div 
+		class="collapse navbar-collapse"
+		[ngClass]="{ 'show': navbarOpen }"
+		id="navbarSupportedContent">
+		<ul class="navbar-nav mx-auto">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Dropdown
+				</a>
+				<div class="dropdown-menu rounded-0" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				</div>
+			</li>
+			<li class="nav-item mx-2 active">
+				<a class="nav-link" href="#">Women</a>
+			</li>
+			<li class="nav-item mx-2 active">
+				<a class="nav-link" href="#">Men</a>
+			</li>
+			<li class="nav-item mx-2 active">
+				<a class="nav-link" href="#">Kids</a>
+			</li>
+			<li class="nav-item mx-2 active">
+				<a class="nav-link" href="#">Shoes</a>
+			</li>
+			<li class="nav-item mx-2 active">
+				<a class="nav-link" href="#">Brands</a>
+			</li>
+		</ul>
+		<form class="form-inline search-form my-2 my-lg-0 position-relative">
+			<fa-icon [icon]="['fa', 'search']" class="position-absolute"></fa-icon>
+			<input class="form-control border-0 mr-sm-2" type="search" placeholder="Search anything" aria-label="Search anything">
+			<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+		</form>
+		<div class="cart mx-2">
+			<fa-icon [icon]="['fa', 'shopping-cart']" (click)="open(cart)"></fa-icon>
+		</div>
+	</div>
+</nav>
+
+<!-- Cart Modal -->
+<ng-template #cart let-modal>
+	<div class="modal-header pl-4 border-0">
+		<h3 class="mb-0 mt-1">Items in Your Cart</h3>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body body-normal px-4">
+		<div class="row heading mx-0 pb-2">
+			<div class="col-lg-8 pl-0">Item</div>
+			<div class="col-lg-1 text-center">Size</div>
+			<div class="col-lg-2 text-center">Quantity</div>
+			<div class="col-lg-1 text-right pr-0">Price</div>
+		</div>
+		<div class="row mx-0 py-2">
+			<div class="col-lg-8 pl-0">
+				<div class="row">
+					<div class="col-4">
+						<img src="https://via.placeholder.com/193.jpg" class="img-fluid">
+					</div>
+					<div class="col-8 d-flex align-content-between flex-wrap">
+						<h3 class="w-100 mb-0 mt-3">Green T-Shirt 2016</h3>
+						<p class="w-100 m-0">MEN BX78SDF</p>
+						<p class="mb-3 mt-0 remove">
+							<fa-icon [icon]="['fa', 'times']"></fa-icon> Remove
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-1 text-center d-flex align-items-center justify-content-center">XXL</div>
+			<div class="col-lg-2 text-center d-flex justify-content-center align-items-center px-2 quantity-container">
+				<fa-icon [icon]="['fa', 'minus']" class="mr-1"></fa-icon>
+				<input type="text" size="3" name="quantity" class="form-control px-2 text-center font-weight-bold py-1" style="height:28px;">
+				<fa-icon [icon]="['fa', 'plus']" class="ml-1"></fa-icon>
+			</div>
+			<div class="col-lg-1 text-right d-flex align-items-center justify-content-center pr-0">
+				<h3>$21</h3>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer d-flex justify-content-between rounded-0">
+		<button type="button" class="btn btn-outline-primary px-4" (click)="modal.close('Save click')">Back to Shop</button>
+		<button class="btn btn-primary px-4">Checkout</button>
+	</div>
+</ng-template>
